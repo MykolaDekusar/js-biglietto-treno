@@ -11,7 +11,7 @@ if ((userChoice === pari) || (userChoice === dispari)) {  //verifico che l'utent
     console.log(userChoice);
     userNumber = prompt("Inserisci un numero compreso tra 1 e 9");
     userNumber = Math.round(Number(userNumber));//trasformo la stringa inserita dall'utente in un numero intero
-    if (!(userNumber <= 1) && !(userNumber >= 9) && !(isNaN(userNumber))) {  //verifico che l'utente abbia inserito un numero valido
+    if (!(userNumber < 1) && !(userNumber > 9) && !(isNaN(userNumber))) {  //verifico che l'utente abbia inserito un numero valido
         console.log(userNumber);
         alert(`Hai scelto ${userChoice} e il numero ${userNumber}, il computer ha giocato ${pcNumber}`);//faccio vedere all'utente cos'ha giocato il computer
         totNumber = userNumber + pcNumber;

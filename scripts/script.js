@@ -13,7 +13,7 @@ let userDistance = prompt('Quanti Km vuoi percorrere?');
 console.log(userDistance);
 userDistance = Number(userDistance);
 console.log(userDistance);
-if (isNaN(userDistance) || userDistance < 0) { //Verifico che la distanza inserita sia valida
+if (isNaN(userDistance) || userDistance <= 0 || userDistance === null) { //Verifico che la distanza inserita sia valida
     alert('ERRORE Inserisci una distanza valida');//Se la distanza non è valida allora esci
 } else {
     // - Creo una variabile e Chiedo tramite prompt all'utente l'età  (verifico che sia effettivamente un numero e lo converto da stringa)
@@ -21,7 +21,7 @@ if (isNaN(userDistance) || userDistance < 0) { //Verifico che la distanza inseri
     console.log(userAge);
     userAge = Math.floor(parseInt(userAge)); //Porto al numero minore se l'utente dovesse inserire un'età con decimali
     console.log(userAge);
-    if (isNaN(userAge) || userAge < 0) { //Verifico che l'età inserita sia valida
+    if (isNaN(userAge) || userAge < 0 || userDistance === null) { //Verifico che l'età inserita sia valida
         alert('ERRORE Inserisci un età valida');//Se l'età non è valida esco sennò continuo
     } else {
         // - Verifico se l'utente rientra nella fascia <18 anni, e se rientra allora applico uno sconto del 20% al prezzo del biglietto
