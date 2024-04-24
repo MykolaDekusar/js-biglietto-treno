@@ -31,7 +31,7 @@ if (isNaN(userDistance) || userDistance <= 0 || userDistance === null) { //Verif
             ticketPrice = ticketPrice - (ticketPrice * (discountU18 / 100));
             console.log(ticketPrice);
             // - Grazie all' uso di toFixed 2 posso creare l'output fino a 2 cifre decimali in questo caso
-            ticketPrice = ticketPrice.toFixed(2);
+            ticketPrice = Math.round(ticketPrice * 100) / 100;
             console.log(ticketPrice);
             alert(`Abbiamo applicato lo sconto del ${discountU18}%. Il prezzo del biglietto è di ${ticketPrice}€`);
             // - Verifico se l'utente rientra nella fascia >65 anni, e se rientra allora applico uno sconto del 40% al prezzo del biglietto
@@ -41,7 +41,7 @@ if (isNaN(userDistance) || userDistance <= 0 || userDistance === null) { //Verif
             ticketPrice = ticketPrice - (ticketPrice * (discountO65 / 100));
             console.log(ticketPrice);
             // - Grazie all' uso di toFixed 2 posso creare l'output fino a 2 cifre decimali in questo caso
-            ticketPrice = ticketPrice.toFixed(2);
+            ticketPrice = Math.round(ticketPrice * 100) / 100;
             console.log(ticketPrice);
             alert(`Abbiamo applicato lo sconto del ${discountO65}%. Il prezzo del biglietto è di ${ticketPrice}€`);
             // - Se l'utente non rientra nelle due fasce non applico nessuno sconto 
@@ -49,7 +49,7 @@ if (isNaN(userDistance) || userDistance <= 0 || userDistance === null) { //Verif
             ticketPrice = (userDistance * kmPrice);
             console.log(ticketPrice);
             // - Grazie all' uso di toFixed 2 posso creare l'output fino a 2 cifre decimali in questo caso
-            ticketPrice = ticketPrice.toFixed(2);
+            ticketPrice = Math.round(ticketPrice * 100) / 100;
             console.log(ticketPrice);
             alert(`Il prezzo del biglietto è di ${ticketPrice}€`);
         }
